@@ -1,0 +1,21 @@
+html
+{
+    background-color: gold;
+}
+#fred
+{
+    color: #309b80;
+    font-size: 24pt;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: flex;
+    background-color: aquamarine;
+}
+#fred:hover
+{
+    color: #1eecb9;
+    background-color: #309b80;
+}
+#fred:active
+{
+    background-color: #000000;;
+}
