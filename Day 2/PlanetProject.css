@@ -1,0 +1,25 @@
+#greenPlanet
+{
+    color: green;
+    font-size: 24pt;
+    font-family: sans-serif;
+    background-color: grey; 
+}
+#redPlanet
+{
+    color: red;
+    font-size: 24pt;
+    font-family: sans-serif;
+    background-color: grey; 
+}
+#bluePlanet
+{
+    color: blue;
+    font-size: 24pt;
+    font-family: sans-serif;
+    background-color: grey; 
+}
+#speech
+{
+    color: rgba(0, 0, 0, 1);
+}
