@@ -1,0 +1,33 @@
+html
+{
+    background-color:rgb(6, 197, 134);
+}
+.page
+{
+    margin: auto;
+    width: 50%;
+    border: 3px solid aquamarine;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color:aquamarine;
+    font-family: 'Roboto', sans-serif;
+    /* box-shadow: 5px 10px; */
+}
+.page:hover
+{
+    animation: subtleTextChange;
+    animation-duration: 2s;
+}
+
+@keyframes subtleTextChange {
+    from {background-color:aquamarine;
+        border: 3px solid aquamarine;        
+    }
+    to{background-color:rgb(12, 148, 103);
+        border: 3px solid rgb(12, 148, 103);}
+}
+.message
+{
+
+}
