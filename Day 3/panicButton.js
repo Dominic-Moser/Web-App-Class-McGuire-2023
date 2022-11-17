@@ -1,13 +1,12 @@
 function soothingMessage()
 {
 
-    if(document.getElementById("message").innerHTML == "It's gon' be alright.")
+    if(document.getElementById("text").innerHTML == "It's gon' be alright.")
     {
-        document.getElementById("message").innerHTML = ""
-
+        document.getElementById("text").innerHTML = "";
     }
     else{
-    document.getElementById("message").innerHTML = "It's gon' be alright.";
+    document.getElementById("text").innerHTML = "It's gon' be alright.";
 
     }
 }

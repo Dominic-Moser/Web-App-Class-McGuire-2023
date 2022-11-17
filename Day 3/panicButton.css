@@ -2,12 +2,12 @@ html
 {
     background-color:rgb(6, 197, 134);
 }
-.page
+#page
 {
     animation-fill-mode:forwards;
     margin: auto;
-    width: 500px;
-    height: 350px;
+    width: 50px;
+    height: 35px;
     padding: 10px;
     text-align: center;
     border-radius: 10px; 
@@ -18,10 +18,15 @@ html
     -webkit-timing-function:ease;
     -webkit-iteration-count:1;
 }
-.page:hover
+#page:hover
 {
     animation: subtleBoxChange 2s;
     animation-fill-mode:forwards;
+}
+#text
+{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 @keyframes subtleBoxChange {
     from {background-color:rgb(128, 255, 212); box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
