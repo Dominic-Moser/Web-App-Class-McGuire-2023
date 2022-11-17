@@ -4,30 +4,30 @@ html
 }
 .page
 {
+    animation-fill-mode:forwards;
     margin: auto;
-    width: 50%;
-    border: 3px solid aquamarine;
+    width: 500px;
+    height: 350px;
     padding: 10px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 10px; 
     background-color:aquamarine;
     font-family: 'Roboto', sans-serif;
-    /* box-shadow: 5px 10px; */
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    animation: subtleBoxChangeReverse 1s;
+    -webkit-timing-function:ease;
+    -webkit-iteration-count:1;
 }
 .page:hover
 {
-    animation: subtleTextChange;
-    animation-duration: 2s;
+    animation: subtleBoxChange 2s;
+    animation-fill-mode:forwards;
 }
-
-@keyframes subtleTextChange {
-    from {background-color:aquamarine;
-        border: 3px solid aquamarine;        
-    }
-    to{background-color:rgb(12, 148, 103);
-        border: 3px solid rgb(12, 148, 103);}
+@keyframes subtleBoxChange {
+    from {background-color:rgb(128, 255, 212); box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
+    to{background-color:rgb(86, 213, 170); box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;}
 }
-.message
-{
-
+@keyframes subtleBoxChangeReverse {
+    from {background-color:rgb(86, 213, 170); box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;}
+    to{background-color:rgb(128, 255, 212); box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
 }
