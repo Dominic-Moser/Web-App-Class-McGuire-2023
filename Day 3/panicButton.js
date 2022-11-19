@@ -1,12 +1,12 @@
 function soothingMessage()
 {
-
-    if(document.getElementById("text").innerHTML == "It's gon' be alright.")
+    if(page.style.animationName != "newPage")
     {
-        document.getElementById("text").innerHTML = "";
+        page.style.animationName = "newPage";
     }
-    else{
-    document.getElementById("text").innerHTML = "It's gon' be alright.";
+     else if(page.style.animationName == "newPage")
+    {
+        page.style.animationName = "newPageReverse";
+    }
 
-    }
 }

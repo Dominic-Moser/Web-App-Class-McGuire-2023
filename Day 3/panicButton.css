@@ -1,10 +1,9 @@
-html
+:root
 {
-    background-color:rgb(6, 197, 134);
+    --background-color: blue;
 }
 #page
 {
-    animation-fill-mode:forwards;
     margin: auto;
     width: 50px;
     height: 35px;
@@ -14,25 +13,76 @@ html
     background-color:aquamarine;
     font-family: 'Roboto', sans-serif;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    animation: subtleBoxChangeReverse 1s;
-    -webkit-timing-function:ease;
-    -webkit-iteration-count:1;
+    animation-direction: reverse;         
+
 }
-#page:hover
+/* #page:hover
 {
-    animation: subtleBoxChange 2s;
+
+    animation: subtleBoxChange 0.2s;
     animation-fill-mode:forwards;
+} */
+#page
+{
+    animation: null 0.75s forwards;
+    animation-fill-mode: forwards;
 }
+
 #text
 {
     text-align: center;
     font-family: 'Roboto', sans-serif;
 }
-@keyframes subtleBoxChange {
-    from {background-color:rgb(128, 255, 212); box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
-    to{background-color:rgb(86, 213, 170); box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;}
+@keyframes null
+{
+
 }
-@keyframes subtleBoxChangeReverse {
-    from {background-color:rgb(86, 213, 170); box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;}
-    to{background-color:rgb(128, 255, 212); box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;}
+@keyframes newPage
+{                        
+
+    from{width: 50px; 
+        height: 35px; 
+        padding: 10px; 
+        margin: auto; 
+        border-radius: 10px; }
+    to{width: 100%; 
+        height: 100vh; 
+        padding: 0px; 
+        margin: auto; 
+        border-radius: 0px;}
+}
+@keyframes newPageReverse
+{
+    to{width: 50px; 
+        height: 35px; 
+        padding: 10px; 
+        margin: auto; 
+        border-radius: 10px; }
+    from{width: 100%; 
+        height: 100vh; 
+        padding: 0px; 
+        margin: auto; 
+        border-radius: 0px;}
+}
+@keyframes subtleBoxChange 
+{
+    from {background-color:rgb(128, 255, 212); 
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;    
+        width: 50px;
+        height: 35px;}
+    to{background-color:rgb(128, 255, 212); 
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        width: 60px;
+        height: 45px;}
+}
+@keyframes subtleBoxChangeReverse 
+{
+    from {background-color:rgb(128, 255, 212); 
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+        width: 60px;
+        height: 45px;}
+    to{background-color:rgb(128, 255, 212); 
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        width: 50px;
+        height: 35px;}
 }

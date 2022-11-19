@@ -1,4 +1,9 @@
-#header
+#websiteContainer
+{
+    background-color: rgb(53, 138, 213);
+}
+
+.header
 {
     margin: auto;
     width: 100%;
@@ -9,7 +14,11 @@
     background-color:aquamarine;
     font-family: 'Roboto', sans-serif;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-
+}
+.header:hover
+{
+    animation: hoverLengthen 2s;
+    animation-fill-mode:forwards;
 }
 #input
 {
@@ -23,4 +32,9 @@
     background-color:aquamarine;
     font-family: 'Roboto', sans-serif;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+@keyframes hoverLengthen
+{
+from{height: 35px;} 
+to{height: 35px*10;}
 }
