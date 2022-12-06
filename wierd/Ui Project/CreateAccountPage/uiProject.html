@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="uiProject.css">
+<link rel="stylesheet" href="reset.css">
+
+<title>Login Card</title>
+<body>
+    <div class = "login-card">
+
+        <div id = loginHeader>
+            
+        </div>
+        <div id = "profilePic">
+            <img src="../Images/user-circle.svg" id = "userPic">
+        </div>
+            <div id = "userNameInput"> 
+                UserName/Email
+                <br><input type = "text" placeholder="UserName" id = "placeHolderUserName"> </input>
+            </div>
+        <div id = "passwordInputs">Password
+            <input class="passwordBox" type="text" placeholder="Password" id = "placeHolderPassword"/>
+            <input class="passwordBox" type="text" placeholder="Repeat Password" id = "placeHolderPasswordRepeat"/>
+        </div>
+
+        <div id="create" onclick="newPasswordChecker()">
+            Continue
+        </div>
+        <div class="loginalternatives">
+            <img src="../Images/brand-google.svg" id = "googleTablar" c>
+            <img src="../Images/brand-github.svg" id = "githubTablar">
+            <img src="../Images/brand-meta.svg" id = "metaTablar">
+            <img src="../Images/brand-apple.svg" id = "appleTablar">
+
+        </div>
+        <div id="matchFalse">
+            Sorry, Your Passwords Did Not Match, Please Try Again
+        </div>
+
+    </div>
+
+</body>
+</html>
+<script src="uiProject.js"></script>   
