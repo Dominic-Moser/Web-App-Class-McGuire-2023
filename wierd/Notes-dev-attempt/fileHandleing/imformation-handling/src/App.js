@@ -12,6 +12,8 @@ import {
 
   } from "firebase/firestore";
 
+  import ImageGallery from './ImageGallary.js';
+
   import error from "./images/404.png"
 
 // this is simple referance for which user the program is refering to
@@ -33,10 +35,13 @@ const app = initializeApp(config);
 
 const db = getFirestore(app);
 
-function App() {
+async function App() {
+
+  const imageUrls = await ListImageData();
 
   return(
     <>
+    <ImageGallery images={imageUrls} />;
       <input id='grade' type='text' placeholder='What Grade Are You In?'></input> <br />
       <input id="school" type='text' placeholder='What School Do You Attend?'></input><br />
       <input id='class' type='text' placeholder='Which Classes Are You Looking To Study For?'></input>
@@ -105,11 +110,16 @@ async function addImageRef()
 async function DisplayImageData()
 {
   const querySnapshot = await getDocs(collection(db, "users", userUID, "images"));
-  querySnapshot.forEach((doc) => {
+  const renderImg = querySnapshot.forEach((doc) => {
     return(
-      console.log("test")
+      <img src={doc.data().image} />
     );
   });
+    return(
+      {renderImg}
+    );
+
+
 }
 
 // async function PosentiallyActuallyDisplayTheImage(link)
@@ -119,12 +129,21 @@ async function DisplayImageData()
 // }
 
 
-async function ListImageData()
-{
+// async function ListImageData()
+// {
+//   const querySnapshot = await getDocs(collection(db, "users", userUID, "images"));
+//   querySnapshot.forEach((doc) => {
+//     console.log( doc.id, " => ", doc.data().image)
+//   });
+// }
+
+async function ListImageData() {
+  const imageUrls = [];
   const querySnapshot = await getDocs(collection(db, "users", userUID, "images"));
   querySnapshot.forEach((doc) => {
-    console.log( doc.id, " => ", doc.data().image)
+    imageUrls.push(doc.data().image);
   });
+  return imageUrls;
 }
 
 async function reWriteUserDataUsingInputs()
@@ -172,5 +191,5 @@ async function addSomeTags()
 
 //3. put data in proper space✅
 
-//4. pull images from user's profile
+//4. pull images from user's profile✅ I need more work done here, list all images under a user's profule and display them.
 
