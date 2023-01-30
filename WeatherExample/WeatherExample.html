@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<script src="WeatherExample.js" ></script>
+<link rel = "stylesheet" type = "text/css" href="WeatherExample.css" ></style>
+
+<head>
+    <title>Current Weather</title>
+</head>
+<body>
+      <form>
+        <label for="fname">City Name:</label><br>
+        <input type="text" id="city"><br>
+        <input type="button" id="submitButton" onClick="getWeather()" value="Submit">
+      </form>
+
+    <ul id="output"></ul>
+    <div id="parentContainer">
+        <div id="mainTempData">
+            <div id="city" class="city">
+                Denver
+            </div>
+            <div id="temp" class="temp">
+                35°F
+            </div>
+            <img src="/icons/sun-filled.svg">
+            <div id="description">
+                Description - In<p style="display:inline" class="city"> CITYNAME </p>it is currently<p style="display:inline"> TEMP</p>,<p style="display:inline"> DESCRIPTION </p>with<p style="display:inline"> a/the Windchll,Sun </p>causing it to feel like it is <p style="display:inline"> feltTemp </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- <script>
+        function getWeather() {
+            let cityName = document.getElementById("city").value;
+
+            const APIKEY = "67475fc71a4d228f978ba24b1ca03f05";
+            const URL = "https://api.openweathermap.org/data/2.5/weather?q=" +
+             cityName + "&appid=" + APIKEY;
+           
+            fetch(URL)
+                .then(function (response) {
+                    return response.json()
+                    })
+                .then(function (data) {
+                    console.log(data);
+                    let temp = Math.round((data.main.temp - 273.15) * 1.8 + 32);
+                    let fact = "The temperature in " + data["name"] + " is " +
+                     temp + " degrees." ;
+                    document.getElementById("output").innerHTML = fact;
+                    })
+                .catch(function (error) {
+                    console.log(JSON.stringify(error));
+                    });
+            }
+    </script> -->
+</body>
+</html>

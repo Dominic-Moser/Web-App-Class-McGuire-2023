@@ -1,0 +1,27 @@
+#feltTemp
+{
+    display: inline;
+}
+#parentContainer
+{
+    font-family: "DDG_ProximaNova","DDG_ProximaNova_UI_0","DDG_ProximaNova_UI_1","DDG_ProximaNova_UI_2","DDG_ProximaNova_UI_3","DDG_ProximaNova_UI_4","DDG_ProximaNova_UI_5","DDG_ProximaNova_UI_6","Proxima Nova","Helvetica Neue","Helvetica","Segoe UI","Nimbus Sans L","Liberation Sans","Open Sans",FreeSans,Arial,sans-serif;    font-size:130%;
+    margin: auto;
+    width: 420px;
+    text-align: center;
+    background-color: rgb(68, 135, 229);
+    border-radius: 10px;
+    display: flexbox;
+}
+#temp
+{
+    font-size: 150%;
+}
+#mainTempData
+{
+    font-size: 150%;
+}
+#description
+{
+    font-size: small;
+    
+}
