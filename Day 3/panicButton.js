@@ -11,8 +11,8 @@
 
 // }
 function soothingMessage() {
-    page.classList.toggle("open");
-  }
+  page.classList.toggle("open");
+}
 function soothingMessage2() {
-  page2.classList.toggle("open");
+page2.classList.toggle("open");
 }
